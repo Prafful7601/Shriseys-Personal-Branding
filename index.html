@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shriseys: Personal Branding & LinkedIn Growth</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0a0b0d',
+          panel: '#131519',
+          line: '#232630',
+          slate: '#7d93ab',
+          coral: '#d9906a',
+          coralsoft: '#e8b394',
+        },
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #0a0b0d; }
+  .serif { font-family: 'Fraunces', serif; }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal-stagger.in > * { opacity: 1; transform: translateY(0); }
+  .reveal-stagger > * { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal-stagger.in > *:nth-child(1) { transition-delay: .05s; }
+  .reveal-stagger.in > *:nth-child(2) { transition-delay: .15s; }
+  .reveal-stagger.in > *:nth-child(3) { transition-delay: .25s; }
+  .reveal-stagger.in > *:nth-child(4) { transition-delay: .35s; }
+
+  .grain::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .placeholder-frame {
+    background:
+      repeating-linear-gradient(45deg, rgba(217,144,106,0.07) 0 10px, transparent 10px 20px),
+      #16171c;
+    border: 1px dashed rgba(217,144,106,0.35);
+  }
+</style>
+</head>
+<body class="bg-ink text-zinc-200 antialiased selection:bg-coral/30 selection:text-white">
+
+<!-- ============================================================= -->
+<!-- HEADER                                                         -->
+<!-- ============================================================= -->
+<header class="sticky top-0 z-50 backdrop-blur bg-ink/85 border-b border-line">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="assets/shriseys-logo.jpeg" alt="Shriseys logo" class="h-14 w-14 object-cover rounded-sm">
+      <span class="serif text-2xl md:text-3xl text-white tracking-tight">Shriseys</span>
+    </div>
+    <a href="#contact" class="text-xs md:text-sm font-medium text-coral hover:text-coralsoft transition-colors">Enquire &rarr;</a>
+  </div>
+</header>
+
+<!-- ============================================================= -->
+<!-- 1. HERO                                                        -->
+<!-- ============================================================= -->
+<section class="relative overflow-hidden grain">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(217,144,106,0.10),_transparent_60%)]"></div>
+  <div class="max-w-6xl mx-auto px-6 md:px-10 pt-20 md:pt-32 pb-24 md:pb-32 relative">
+    <div class="reveal">
+      <span class="inline-block text-xs uppercase tracking-[0.25em] text-coral/90 border border-coral/30 rounded-full px-4 py-1.5 mb-8">
+        Personal Branding & LinkedIn Growth
+      </span>
+    </div>
+    <h1 class="reveal serif text-4xl sm:text-5xl md:text-7xl leading-[1.05] font-medium text-white max-w-4xl">
+      Your LinkedIn profile is not a resume.
+      <span class="text-coral">It's a sales page nobody is optimizing.</span>
+    </h1>
+
+    <p class="reveal mt-8 text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed">
+      Shriseys builds personal brands for founders, consultants, and senior leaders: clear positioning, a real
+      content system, and the kind of visibility that turns into inbound conversations, not just likes.
+    </p>
+
+    <div class="reveal mt-10 flex flex-wrap items-center gap-4">
+      <a href="#contact" class="rounded-full bg-coral text-ink font-semibold px-7 py-3.5 hover:bg-coralsoft transition-colors">
+        Start with Shriseys
+      </a>
+      <a href="#results" class="rounded-full border border-line text-zinc-300 font-medium px-7 py-3.5 hover:border-coral/50 hover:text-white transition-colors">
+        See real results
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 2. WHAT WE DELIVER                                             -->
+<!-- ============================================================= -->
+<section class="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
+  <div class="reveal max-w-2xl mb-14">
+    <span class="text-xs uppercase tracking-[0.25em] text-coral/80">What We Deliver</span>
+    <h2 class="serif text-3xl md:text-5xl text-white mt-4">Strategy, not just posting.</h2>
+  </div>
+
+  <!-- PLACEHOLDER: confirm/replace these 4 service offerings and their one-line descriptions -->
+  <div class="reveal-stagger grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="rounded-2xl bg-panel border border-line p-7 hover:border-coral/40 transition-colors">
+      <div class="h-10 w-10 rounded-lg bg-coral/10 border border-coral/30 flex items-center justify-center text-coral mb-6 text-lg">1</div>
+      <h3 class="text-white font-semibold text-lg mb-2">Profile Optimization</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed">A profile rebuilt around positioning: headline, banner, about, and featured section aligned to how you want to be seen.</p>
+    </div>
+    <div class="rounded-2xl bg-panel border border-line p-7 hover:border-coral/40 transition-colors">
+      <div class="h-10 w-10 rounded-lg bg-coral/10 border border-coral/30 flex items-center justify-center text-coral mb-6 text-lg">2</div>
+      <h3 class="text-white font-semibold text-lg mb-2">Content Strategy</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed">A content system with clear pillars, formats, and a cadence built around what your audience actually engages with.</p>
+    </div>
+    <div class="rounded-2xl bg-panel border border-line p-7 hover:border-coral/40 transition-colors">
+      <div class="h-10 w-10 rounded-lg bg-coral/10 border border-coral/30 flex items-center justify-center text-coral mb-6 text-lg">3</div>
+      <h3 class="text-white font-semibold text-lg mb-2">Positioning &amp; Messaging</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed">Clarity on who you serve, what you stand for, and the language that makes both obvious in seconds.</p>
+    </div>
+    <div class="rounded-2xl bg-panel border border-line p-7 hover:border-coral/40 transition-colors">
+      <div class="h-10 w-10 rounded-lg bg-coral/10 border border-coral/30 flex items-center justify-center text-coral mb-6 text-lg">4</div>
+      <h3 class="text-white font-semibold text-lg mb-2">Personal Brand Audits</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed">A full diagnostic of your current presence: what's working, what's costing you credibility, and what to fix first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 3. APPROACH / PROCESS                                          -->
+<!-- ============================================================= -->
+<section class="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
+  <div class="reveal max-w-2xl mb-16">
+    <span class="text-xs uppercase tracking-[0.25em] text-coral/80">Approach</span>
+    <h2 class="serif text-3xl md:text-5xl text-white mt-4">A simple, repeatable process.</h2>
+  </div>
+
+  <!-- PLACEHOLDER: confirm/replace these 4 process steps -->
+  <div class="reveal-stagger grid md:grid-cols-4 gap-8 md:gap-4 relative">
+    <div class="hidden md:block absolute top-6 left-[12.5%] right-[12.5%] h-px bg-line"></div>
+    <div class="relative">
+      <div class="h-12 w-12 rounded-full bg-ink border border-coral flex items-center justify-center text-coral font-semibold serif text-lg mb-5 relative z-10">1</div>
+      <h3 class="text-white font-semibold mb-2">Discovery</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed">Understanding your goals, audience, and where your current presence falls short.</p>
+    </div>
+    <div class="relative">
+      <div class="h-12 w-12 rounded-full bg-ink border border-coral flex items-center justify-center text-coral font-semibold serif text-lg mb-5 relative z-10">2</div>
+      <h3 class="text-white font-semibold mb-2">Positioning</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed">Defining a clear, differentiated narrative: the foundation everything else is built on.</p>
+    </div>
+    <div class="relative">
+      <div class="h-12 w-12 rounded-full bg-ink border border-coral flex items-center justify-center text-coral font-semibold serif text-lg mb-5 relative z-10">3</div>
+      <h3 class="text-white font-semibold mb-2">Content Strategy</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed">Turning positioning into a content engine with pillars, formats, and a realistic cadence.</p>
+    </div>
+    <div class="relative">
+      <div class="h-12 w-12 rounded-full bg-ink border border-coral flex items-center justify-center text-coral font-semibold serif text-lg mb-5 relative z-10">4</div>
+      <h3 class="text-white font-semibold mb-2">Ongoing Growth</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed">Consistent execution, performance review, and iteration as the audience compounds.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 4. RESULTS / CASE STUDIES                                      -->
+<!-- ============================================================= -->
+<section id="results" class="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
+  <div class="reveal max-w-2xl mb-14">
+    <span class="text-xs uppercase tracking-[0.25em] text-coral/80">Results</span>
+    <h2 class="serif text-3xl md:text-5xl text-white mt-4">What it looks like in practice.</h2>
+    <p class="mt-4 text-zinc-400 text-sm">
+      Real LinkedIn analytics from clients, shared with permission. Each figure keeps its original timeframe:
+      growth compared over different windows isn't directly comparable, and we'd rather be precise than impressive.
+    </p>
+  </div>
+
+  <div class="reveal-stagger grid md:grid-cols-2 gap-6">
+
+    <!-- CASE STUDY 1: Bhavana Rani — real screenshot, verified against source -->
+    <div class="rounded-2xl bg-panel border border-line overflow-hidden hover:border-coral/40 transition-colors">
+      <div class="aspect-[16/10] bg-[#16171c] flex items-center justify-center relative">
+        <img src="assets/screenshots/bhavana-growth.png" alt="Bhavana Rani, LinkedIn content performance analytics"
+             class="absolute inset-0 w-full h-full object-cover">
+      </div>
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-zinc-500 mb-1">Global Learning Strategy Leader, National Geographic Society</p>
+        <h3 class="text-white font-semibold text-lg mb-3">Bhavana (Rani)</h3>
+        <div class="flex items-baseline gap-2 mb-1">
+          <span class="serif text-3xl text-coral">+192%</span>
+          <span class="text-sm text-zinc-500">impressions, 365 days</span>
+        </div>
+        <p class="text-sm text-zinc-400">141,082 total content impressions, alongside 379% follower growth over the same period.</p>
+      </div>
+    </div>
+
+    <!-- CASE STUDY 2: Vijay Saini — real screenshot, verified against source -->
+    <div class="rounded-2xl bg-panel border border-line overflow-hidden hover:border-coral/40 transition-colors">
+      <div class="aspect-[16/10] bg-[#16171c] flex items-center justify-center relative">
+        <img src="assets/screenshots/vijay-saini-growth.png" alt="Vijay Saini, LinkedIn follower growth analytics"
+             class="absolute inset-0 w-full h-full object-cover">
+        <span class="absolute top-3 left-3 rounded-full bg-ink/90 border border-coral/50 text-coral text-[11px] font-semibold px-3 py-1">
+          1 week since onboarding
+        </span>
+      </div>
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-zinc-500 mb-1">Founder, Zstate AI</p>
+        <h3 class="text-white font-semibold text-lg mb-3">Vijay Saini</h3>
+        <div class="flex items-baseline gap-2 mb-1">
+          <span class="serif text-3xl text-coral">+53%</span>
+          <span class="text-sm text-zinc-500">follower growth, 14 days</span>
+        </div>
+        <p class="text-sm text-zinc-400">1,579 total followers. The chart's entire climb happened in the week after onboarding with Shriseys, not before.</p>
+      </div>
+    </div>
+
+    <!-- CASE STUDY 3: CA Ami Dhabalia -->
+    <div class="rounded-2xl bg-panel border border-line overflow-hidden hover:border-coral/40 transition-colors">
+      <div class="aspect-[16/10] bg-[#16171c] flex items-center justify-center relative">
+        <img src="ami analytics, 52% grpwth.png" alt="CA Ami Dhabalia, LinkedIn follower growth analytics"
+             class="absolute inset-0 w-full h-full object-cover">
+      </div>
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-zinc-500 mb-1">Compliance, NRI &amp; Cross-Border Tax, Mahesh Dhabalia &amp; Co.</p>
+        <h3 class="text-white font-semibold text-lg mb-3">CA Ami Dhabalia</h3>
+        <div class="flex items-baseline gap-2 mb-1">
+          <span class="serif text-3xl text-coral">+52%</span>
+          <span class="text-sm text-zinc-500">follower growth, 90 days</span>
+        </div>
+        <p class="text-sm text-zinc-400">8,713 total followers, with growth accelerating sharply through the most recent quarter.</p>
+      </div>
+    </div>
+
+    <!-- CASE STUDY 4: Charu Agrawal -->
+    <div class="rounded-2xl bg-panel border border-line overflow-hidden hover:border-coral/40 transition-colors">
+      <div class="aspect-[16/10] bg-[#16171c] flex items-center justify-center relative">
+        <img src="charu analytics.png" alt="Charu Agrawal, LinkedIn content performance analytics"
+             class="absolute inset-0 w-full h-full object-contain">
+      </div>
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-zinc-500 mb-1">Entrepreneur, Ishin Fashions</p>
+        <h3 class="text-white font-semibold text-lg mb-3">Charu Agrawal</h3>
+        <div class="flex items-baseline gap-2 mb-1">
+          <span class="serif text-3xl text-coral">+64.4%</span>
+          <span class="text-sm text-zinc-500">content impressions, 3 months</span>
+        </div>
+        <p class="text-sm text-zinc-400">95,994 content impressions over the last three months.</p>
+      </div>
+    </div>
+
+    <!-- CASE STUDY 5: Prateek Tosniwal -->
+    <div class="rounded-2xl bg-panel border border-line overflow-hidden hover:border-coral/40 transition-colors">
+      <div class="aspect-[16/10] bg-[#16171c] flex items-center justify-center relative">
+        <img src="prateek analytics.png" alt="Prateek Tosniwal, LinkedIn follower growth analytics"
+             class="absolute inset-0 w-full h-full object-cover">
+      </div>
+      <div class="p-6">
+        <p class="text-xs uppercase tracking-wide text-zinc-500 mb-1">Executive Director, MICS International &amp; Founder, Ivy Growth Associates</p>
+        <h3 class="text-white font-semibold text-lg mb-3">Prateek Tosniwal</h3>
+        <div class="flex items-baseline gap-2 mb-1">
+          <span class="serif text-3xl text-coral">+42%</span>
+          <span class="text-sm text-zinc-500">follower growth, 90 days</span>
+        </div>
+        <p class="text-sm text-zinc-400">40,026 total followers, with 11,820 followers gained in the last 90 days.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- TRUSTED BY / NETWORK STRIP                                     -->
+<!-- ============================================================= -->
+<section class="max-w-6xl mx-auto px-6 md:px-10 pb-24 md:pb-32">
+  <div class="reveal mb-10">
+    <span class="text-xs uppercase tracking-[0.25em] text-coral/80">Trusted By</span>
+    <h2 class="serif text-2xl md:text-3xl text-white mt-3">A few of the people we've worked with.</h2>
+  </div>
+  <div class="reveal-stagger grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+    <a href="https://www.linkedin.com/in/divyajainseekho" target="_blank" rel="noopener"
+       class="group rounded-xl bg-panel border border-line p-6 text-center hover:border-coral/40 transition-colors">
+      <img src="assets/screenshots/divya-jain.png" alt="Divya Jain" class="h-16 w-16 rounded-full mx-auto mb-4 object-cover bg-line">
+      <h4 class="text-white font-medium text-sm group-hover:text-coral transition-colors">Divya Jain</h4>
+      <p class="text-xs text-zinc-500 mt-1">Founder, Safeducate. ET 40 Under Forty</p>
+      <span class="inline-block mt-3 text-[11px] text-coral/80">View on LinkedIn &rarr;</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/charu-agrawal-511409178" target="_blank" rel="noopener"
+       class="group rounded-xl bg-panel border border-line p-6 text-center hover:border-coral/40 transition-colors">
+      <img src="assets/screenshots/charu-agrawal.jpeg" alt="Charu Agrawal" class="h-16 w-16 rounded-full mx-auto mb-4 object-cover bg-line">
+      <h4 class="text-white font-medium text-sm group-hover:text-coral transition-colors">Charu Agrawal</h4>
+      <p class="text-xs text-zinc-500 mt-1">Entrepreneur, Ishin Fashions</p>
+      <span class="inline-block mt-3 text-[11px] text-coral/80">View on LinkedIn &rarr;</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/sneha-jain-5a989015/" target="_blank" rel="noopener"
+       class="group rounded-xl bg-panel border border-line p-6 text-center hover:border-coral/40 transition-colors">
+      <img src="assets/screenshots/sneha-jain.png" alt="Sneha Jain" class="h-16 w-16 rounded-full mx-auto mb-4 object-cover bg-line">
+      <h4 class="text-white font-medium text-sm group-hover:text-coral transition-colors">Sneha Jain</h4>
+      <p class="text-xs text-zinc-500 mt-1">Director &amp; Co-founder, Bay Leaf Chain of Salons</p>
+      <span class="inline-block mt-3 text-[11px] text-coral/80">View on LinkedIn &rarr;</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/prateektosniwal/" target="_blank" rel="noopener"
+       class="group rounded-xl bg-panel border border-line p-6 text-center hover:border-coral/40 transition-colors">
+      <img src="assets/screenshots/prateek-tosniwal.png" alt="Prateek Tosniwal" class="h-16 w-16 rounded-full mx-auto mb-4 object-cover bg-line">
+      <h4 class="text-white font-medium text-sm group-hover:text-coral transition-colors">Prateek Tosniwal</h4>
+      <p class="text-xs text-zinc-500 mt-1">Partner, MICS International. Founder, Ivy Growth Associates</p>
+      <span class="inline-block mt-3 text-[11px] text-coral/80">View on LinkedIn &rarr;</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 5. WHY WORK WITH SHRISEYS                                      -->
+<!-- ============================================================= -->
+<section class="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
+  <div class="reveal max-w-2xl mb-14">
+    <span class="text-xs uppercase tracking-[0.25em] text-coral/80">Why Shriseys</span>
+    <h2 class="serif text-3xl md:text-5xl text-white mt-4">Built on structure, proven by results.</h2>
+  </div>
+
+  <!-- PLACEHOLDER: confirm/replace these 3 trust points -->
+  <div class="reveal-stagger grid md:grid-cols-3 gap-8">
+    <div>
+      <div class="h-px w-10 bg-coral mb-5"></div>
+      <h3 class="text-white font-semibold mb-2">Proven across industries</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed">From compliance and finance to fashion and founder-led brands, the strategy adapts and the results hold.</p>
+    </div>
+    <div>
+      <div class="h-px w-10 bg-coral mb-5"></div>
+      <h3 class="text-white font-semibold mb-2">Data-backed, not guesswork</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed">Every recommendation is checked against real analytics: impressions, engagement, and follower quality, not vanity metrics.</p>
+    </div>
+    <div>
+      <div class="h-px w-10 bg-coral mb-5"></div>
+      <h3 class="text-white font-semibold mb-2">Part of a full consulting practice</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed">Personal branding sits alongside Shriseys' broader business, brand, and growth consulting, so your positioning stays aligned with the rest of your strategy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 6. CONTACT / CTA                                               -->
+<!-- ============================================================= -->
+<section id="contact" class="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
+  <div class="reveal rounded-3xl bg-panel border border-line p-10 md:p-16 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(217,144,106,0.08),_transparent_65%)]"></div>
+    <div class="relative">
+      <h2 class="serif text-3xl md:text-5xl text-white mb-5">Ready to build a brand people remember?</h2>
+      <p class="text-zinc-400 max-w-xl mx-auto mb-10">Tell Shriseys a bit about you and your goals, and we'll take it from there.</p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="mailto:nishit@shriseys.com" class="rounded-full bg-coral text-ink font-semibold px-7 py-3.5 hover:bg-coralsoft transition-colors">
+          Email Shriseys
+        </a>
+        <!-- PLACEHOLDER: Shriseys website link -->
+        <a href="https://PLACEHOLDER-shriseys-website.com" target="_blank" rel="noopener" class="rounded-full border border-line text-zinc-300 font-medium px-7 py-3.5 hover:border-coral/50 hover:text-white transition-colors">
+          Visit Shriseys
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- FOOTER                                                         -->
+<!-- ============================================================= -->
+<footer class="border-t border-line">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <img src="assets/shriseys-logo.jpeg" alt="Shriseys" class="h-6 w-auto rounded-sm">
+      <span class="text-xs text-zinc-500">Personal branding and LinkedIn growth</span>
+    </div>
+    <p class="text-xs text-zinc-600">&copy; 2026 Shriseys. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
