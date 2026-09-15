@@ -10,12 +10,12 @@
     theme: {
       extend: {
         colors: {
-          ink: '#0a0b0d',
-          panel: '#131519',
-          line: '#232630',
-          slate: '#7d93ab',
-          coral: '#d9906a',
-          coralsoft: '#e8b394',
+          ink: '#163b54',
+          panel: '#ffffff',
+          line: '#d8e4eb',
+          slate: '#5d7d91',
+          coral: '#e99151',
+          coralsoft: '#f4a477',
         },
       }
     }
@@ -26,8 +26,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', system-ui, sans-serif; background: #0a0b0d; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #ffffff; color: #163b54; }
   .serif { font-family: 'Fraunces', serif; }
+
+  .site-header { background: rgba(41, 84, 117, 0.28); border-color: rgba(255,255,255,0.18); }
+  .hero { min-height: 760px; background: #527d9e; }
+  .hero-photo { background: linear-gradient(90deg, rgba(10, 41, 68, 0.74), rgba(10, 41, 68, 0.25)), url('assets/growth-hero.png') center/cover; }
+  .content-section { background: #ffffff; }
+  .content-section .text-white { color: #163b54 !important; }
+  .content-section .text-zinc-400 { color: #5d7d91 !important; }
+  .content-section .text-zinc-500, .content-section .text-zinc-600 { color: #7894a5 !important; }
+  .content-section .bg-panel { background-color: #ffffff !important; }
+  .content-section .bg-ink { background-color: #ffffff !important; }
+  .content-section .border-line { border-color: #d8e4eb !important; }
+  .content-section .text-zinc-300 { color: #163b54 !important; }
+  .content-section .hover\\:text-white:hover { color: #163b54 !important; }
+
+  #cursor-dot { position: fixed; z-index: 100; top: 0; left: 0; width: 12px; height: 12px; border-radius: 9999px; background: #e99151; box-shadow: 0 0 0 5px rgba(233,145,81,.16); pointer-events: none; transform: translate(-50%, -50%); transition: width .18s ease, height .18s ease, background .18s ease; }
+  @media (hover: hover) and (pointer: fine) { body, body * { cursor: none !important; } }
+  @media (hover: none), (pointer: coarse) { #cursor-dot { display: none; } }
 
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
@@ -47,33 +64,40 @@
 
   .placeholder-frame {
     background:
-      repeating-linear-gradient(45deg, rgba(217,144,106,0.07) 0 10px, transparent 10px 20px),
-      #16171c;
-    border: 1px dashed rgba(217,144,106,0.35);
+      repeating-linear-gradient(45deg, rgba(233,145,81,0.08) 0 10px, transparent 10px 20px),
+      #1b4865;
+    border: 1px dashed rgba(233,145,81,0.45);
   }
 </style>
 </head>
-<body class="bg-ink text-zinc-200 antialiased selection:bg-coral/30 selection:text-white">
+<body class="text-zinc-200 antialiased selection:bg-coral/30 selection:text-white">
 
 <!-- ============================================================= -->
 <!-- HEADER                                                         -->
 <!-- ============================================================= -->
-<header class="sticky top-0 z-50 backdrop-blur bg-ink/85 border-b border-line">
-  <div class="max-w-6xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+<header class="site-header absolute inset-x-0 top-0 z-50 border-b backdrop-blur-md">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 h-28 md:h-32 flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <img src="assets/shriseys-logo.jpeg" alt="Shriseys logo" class="h-14 w-14 object-cover rounded-sm">
-      <span class="serif text-2xl md:text-3xl text-white tracking-tight">Shriseys</span>
+      <img src="assets/shriseys-logo-cropped.png" alt="Shriseys - Where Wealth Learns to Rise" class="h-20 md:h-24 w-24 md:w-28 object-contain object-left">
     </div>
-    <a href="#contact" class="text-xs md:text-sm font-medium text-coral hover:text-coralsoft transition-colors">Enquire &rarr;</a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-white">
+      <a href="#home" class="hover:text-coralsoft transition-colors">Home</a>
+      <a href="#services" class="hover:text-coralsoft transition-colors">What We Do</a>
+      <a href="#approach" class="hover:text-coralsoft transition-colors">How It Works</a>
+      <a href="#results" class="hover:text-coralsoft transition-colors">Private Markets</a>
+      <a href="#about" class="hover:text-coralsoft transition-colors">About</a>
+    </nav>
+    <a href="#contact" class="rounded-full bg-coral text-white text-xs md:text-sm font-bold px-5 py-3 hover:bg-coralsoft transition-colors">Contact Us <span class="ml-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-ink">&rarr;</span></a>
   </div>
 </header>
 
 <!-- ============================================================= -->
 <!-- 1. HERO                                                        -->
 <!-- ============================================================= -->
-<section class="relative overflow-hidden grain">
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(217,144,106,0.10),_transparent_60%)]"></div>
-  <div class="max-w-6xl mx-auto px-6 md:px-10 pt-20 md:pt-32 pb-24 md:pb-32 relative">
+<section id="home" class="hero relative overflow-hidden grain">
+  <div class="hero-photo absolute inset-0"></div>
+  <div class="absolute inset-0 bg-[linear-gradient(90deg,_rgba(15,52,75,0.48),_transparent_68%)]"></div>
+  <div class="max-w-6xl mx-auto px-6 md:px-10 pt-40 pb-20 md:pt-48 md:pb-24 min-h-[760px] flex flex-col justify-end relative">
     <div class="reveal">
       <span class="inline-block text-xs uppercase tracking-[0.25em] text-coral/90 border border-coral/30 rounded-full px-4 py-1.5 mb-8">
         Personal Branding & LinkedIn Growth
@@ -103,7 +127,7 @@
 <!-- ============================================================= -->
 <!-- 2. WHAT WE DELIVER                                             -->
 <!-- ============================================================= -->
-<section class="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
+<section id="services" class="content-section max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
   <div class="reveal max-w-2xl mb-14">
     <span class="text-xs uppercase tracking-[0.25em] text-coral/80">What We Deliver</span>
     <h2 class="serif text-3xl md:text-5xl text-white mt-4">Strategy, not just posting.</h2>
@@ -137,7 +161,7 @@
 <!-- ============================================================= -->
 <!-- 3. APPROACH / PROCESS                                          -->
 <!-- ============================================================= -->
-<section class="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
+<section id="approach" class="content-section max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
   <div class="reveal max-w-2xl mb-16">
     <span class="text-xs uppercase tracking-[0.25em] text-coral/80">Approach</span>
     <h2 class="serif text-3xl md:text-5xl text-white mt-4">A simple, repeatable process.</h2>
@@ -172,7 +196,7 @@
 <!-- ============================================================= -->
 <!-- 4. RESULTS / CASE STUDIES                                      -->
 <!-- ============================================================= -->
-<section id="results" class="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
+<section id="results" class="content-section max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
   <div class="reveal max-w-2xl mb-14">
     <span class="text-xs uppercase tracking-[0.25em] text-coral/80">Results</span>
     <h2 class="serif text-3xl md:text-5xl text-white mt-4">What it looks like in practice.</h2>
@@ -186,7 +210,7 @@
 
     <!-- CASE STUDY 1: Bhavana Rani — real screenshot, verified against source -->
     <div class="rounded-2xl bg-panel border border-line overflow-hidden hover:border-coral/40 transition-colors">
-      <div class="aspect-[16/10] bg-[#16171c] flex items-center justify-center relative">
+      <div class="aspect-[16/10] bg-[#153a55] flex items-center justify-center relative">
         <img src="assets/screenshots/bhavana-growth.png" alt="Bhavana Rani, LinkedIn content performance analytics"
              class="absolute inset-0 w-full h-full object-cover">
       </div>
@@ -203,7 +227,7 @@
 
     <!-- CASE STUDY 2: Vijay Saini — real screenshot, verified against source -->
     <div class="rounded-2xl bg-panel border border-line overflow-hidden hover:border-coral/40 transition-colors">
-      <div class="aspect-[16/10] bg-[#16171c] flex items-center justify-center relative">
+      <div class="aspect-[16/10] bg-[#153a55] flex items-center justify-center relative">
         <img src="assets/screenshots/vijay-saini-growth.png" alt="Vijay Saini, LinkedIn follower growth analytics"
              class="absolute inset-0 w-full h-full object-cover">
         <span class="absolute top-3 left-3 rounded-full bg-ink/90 border border-coral/50 text-coral text-[11px] font-semibold px-3 py-1">
@@ -223,7 +247,7 @@
 
     <!-- CASE STUDY 3: CA Ami Dhabalia -->
     <div class="rounded-2xl bg-panel border border-line overflow-hidden hover:border-coral/40 transition-colors">
-      <div class="aspect-[16/10] bg-[#16171c] flex items-center justify-center relative">
+      <div class="aspect-[16/10] bg-[#153a55] flex items-center justify-center relative">
         <img src="assets/screenshots/ami-dhabalia-growth.png" alt="CA Ami Dhabalia, LinkedIn follower growth analytics"
              class="absolute inset-0 w-full h-full object-cover">
       </div>
@@ -240,7 +264,7 @@
 
     <!-- CASE STUDY 4: Charu Agrawal -->
     <div class="rounded-2xl bg-panel border border-line overflow-hidden hover:border-coral/40 transition-colors">
-      <div class="aspect-[16/10] bg-[#16171c] flex items-center justify-center relative">
+      <div class="aspect-[16/10] bg-[#153a55] flex items-center justify-center relative">
         <img src="charu analytics.png" alt="Charu Agrawal, LinkedIn content performance analytics"
              class="absolute inset-0 w-full h-full object-contain">
       </div>
@@ -257,7 +281,7 @@
 
     <!-- CASE STUDY 5: Prateek Tosniwal -->
     <div class="rounded-2xl bg-panel border border-line overflow-hidden hover:border-coral/40 transition-colors">
-      <div class="aspect-[16/10] bg-[#16171c] flex items-center justify-center relative">
+      <div class="aspect-[16/10] bg-[#153a55] flex items-center justify-center relative">
         <img src="prateek analytics.png" alt="Prateek Tosniwal, LinkedIn follower growth analytics"
              class="absolute inset-0 w-full h-full object-cover">
       </div>
@@ -278,7 +302,7 @@
 <!-- ============================================================= -->
 <!-- TRUSTED BY / NETWORK STRIP                                     -->
 <!-- ============================================================= -->
-<section class="max-w-6xl mx-auto px-6 md:px-10 pb-24 md:pb-32">
+<section class="content-section max-w-6xl mx-auto px-6 md:px-10 pb-24 md:pb-32">
   <div class="reveal mb-10">
     <span class="text-xs uppercase tracking-[0.25em] text-coral/80">Trusted By</span>
     <h2 class="serif text-2xl md:text-3xl text-white mt-3">A few of the people we've worked with.</h2>
@@ -323,7 +347,7 @@
 <!-- ============================================================= -->
 <!-- 5. WHY WORK WITH SHRISEYS                                      -->
 <!-- ============================================================= -->
-<section class="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
+<section id="about" class="content-section max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
   <div class="reveal max-w-2xl mb-14">
     <span class="text-xs uppercase tracking-[0.25em] text-coral/80">Why Shriseys</span>
     <h2 class="serif text-3xl md:text-5xl text-white mt-4">Built on structure, proven by results.</h2>
@@ -352,9 +376,9 @@
 <!-- ============================================================= -->
 <!-- 6. CONTACT / CTA                                               -->
 <!-- ============================================================= -->
-<section id="contact" class="max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
+<section id="contact" class="content-section max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-line">
   <div class="reveal rounded-3xl bg-panel border border-line p-10 md:p-16 text-center relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(217,144,106,0.08),_transparent_65%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(120,159,189,0.30),_transparent_65%)]"></div>
     <div class="relative">
       <h2 class="serif text-3xl md:text-5xl text-white mb-5">Ready to build a brand people remember?</h2>
       <p class="text-zinc-400 max-w-xl mx-auto mb-10">Tell Shriseys a bit about you and your goals, and we'll take it from there.</p>
@@ -373,17 +397,27 @@
 <!-- ============================================================= -->
 <!-- FOOTER                                                         -->
 <!-- ============================================================= -->
-<footer class="border-t border-line">
+<footer class="content-section border-t border-line">
   <div class="max-w-6xl mx-auto px-6 md:px-10 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
     <div class="flex items-center gap-3">
-      <img src="assets/shriseys-logo.jpeg" alt="Shriseys" class="h-6 w-auto rounded-sm">
+      <img src="assets/shriseys-logo-cropped.png" alt="Shriseys" class="h-10 w-12 object-contain object-left">
       <span class="text-xs text-zinc-500">Personal branding and LinkedIn growth</span>
     </div>
     <p class="text-xs text-zinc-600">&copy; 2026 Shriseys. All rights reserved.</p>
   </div>
 </footer>
 
+<div id="cursor-dot" aria-hidden="true"></div>
+
 <script>
+  const cursorDot = document.getElementById('cursor-dot');
+  window.addEventListener('pointermove', (event) => {
+    cursorDot.style.transform = `translate(${event.clientX}px, ${event.clientY}px) translate(-50%, -50%)`;
+  });
+  document.querySelectorAll('a, button').forEach((element) => {
+    element.addEventListener('pointerenter', () => { cursorDot.style.width = '18px'; cursorDot.style.height = '18px'; });
+    element.addEventListener('pointerleave', () => { cursorDot.style.width = '12px'; cursorDot.style.height = '12px'; });
+  });
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
